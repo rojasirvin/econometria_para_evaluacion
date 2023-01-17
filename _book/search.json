@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Econometría para Evaluación de Programas",
+    "section": "",
+    "text": "Prefacio\nAquí va un prefacio. Última cosa que escribir.\nPero por ahora, nos servirá para escribir instrucciones generales.\nPara citar algo se hace así:\nEn su clásico artículo White (1980) muestra que se pueden hacer cosas sin asumir normalidad.\nPara ello, notar que el archivo referencias.bib tiene los datos del artículo citado.\nLo que vamos a hacer es:\nPara cada una de las clases de EPS 2021 hay un archivo de presentaciones. Vamos a crear un archivo por clase, por ahora. Yo luego me daré a la tarea de concatenar los archivos por temas.\nVer el ejemplo para la clase 1.\n\nCreamos un documento de html de Quarto en limpio\nPegamos en el documento el contenido de la clase\nEliminamos las separaciones de las diapositivas, que son tres guiones “—” o dos guíones “–” en el caso de las pausas. Dejemos los títulos y subtítulos.\nUna vez que está limpio, agreguemos un símbolo de gato donde ya hay símbolo de gato. Esto meterá un nivel el texto.\n\n\n\n\n\nWhite, Halbert. 1980. “A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity.” Econometrica: Journal of the Econometric Society, 817–38."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "Aquí escribiremos la introducción del libro."
+  },
+  {
+    "objectID": "resumen.html",
+    "href": "resumen.html",
+    "title": "2  Resumen",
+    "section": "",
+    "text": "Resumen. ¿Necesitamos esta sección?"
+  },
+  {
+    "objectID": "referencias.html",
+    "href": "referencias.html",
+    "title": "Referencias",
+    "section": "",
+    "text": "White, Halbert. 1980. “A Heteroskedasticity-Consistent Covariance\nMatrix Estimator and a Direct Test for Heteroskedasticity.”\nEconometrica: Journal of the Econometric Society, 817–38."
+  },
+  {
+    "objectID": "clase_1.html",
+    "href": "clase_1.html",
+    "title": "3  Clase 1",
+    "section": "",
+    "text": "4 Ejemplo: impuestos\n\\[E(H|W,X,t)=\\int\\phi(W(1-t_j),X,U)dG(U|X,W)\\] - No necesitamos un contrafactual pues podemos esperar que lo ocurrido antes aplique para el futuro si \\(\\phi(\\cdot)\\) y \\(G(\\cdot)\\) no cambiaron"
+  },
+  {
+    "objectID": "clase_1.html#evaluación-de-programas",
+    "href": "clase_1.html#evaluación-de-programas",
+    "title": "3  Clase 1",
+    "section": "3.1 Evaluación de programas",
+    "text": "3.1 Evaluación de programas\n\nEste curso está enfocado en métodos para identificar relaciones causales\nEntre ellas están las relaciones que surgen por la implementación deliberada de programas públicos\nPero no nos limitamos a este tipo de acciones: nos interesa comprender la teoría y la práctica para dar respuesta a relaciones que surgen\n\nDe la legislación nacional o subnacional\nDe fenómenos naturales\nDel funcionamiento de los mercados y las instituciones\n\nEn el curso enfatizaremos lo siguiente:\n\nLa importancia de las preguntas\nEl diseño para responder dichas preguntas\nLas técnicas apropiadas para implementar el diseño"
+  },
+  {
+    "objectID": "clase_1.html#las-preguntas",
+    "href": "clase_1.html#las-preguntas",
+    "title": "3  Clase 1",
+    "section": "3.2 Las preguntas",
+    "text": "3.2 Las preguntas\n\nPodemos estimar relaciones causales casi de cualquier cosa\nPero no todas las relaciones causales son de interés\nY muchas cosas que son de interés son difíciles de estudiar desde el punto de vista de las relaciones causales"
+  },
+  {
+    "objectID": "clase_1.html#la-importancia-de-la-teoría",
+    "href": "clase_1.html#la-importancia-de-la-teoría",
+    "title": "3  Clase 1",
+    "section": "3.3 La importancia de la teoría",
+    "text": "3.3 La importancia de la teoría\n\nEn este curso enfatizacermos la evaluación relacionada a la respuesta de una relación teórica\nPara los economistas, los datos no hablan solos\nLa teoría es necesaria para establecer la relación entre \\(x\\) y \\(y\\)\nTenemos la fortuna de disponer cada vez de mejores datos\nMejores datos nos permiten probar mejor modelos cada vez más ricos"
+  },
+  {
+    "objectID": "clase_1.html#series-de-tiempo-vs-microeconometría",
+    "href": "clase_1.html#series-de-tiempo-vs-microeconometría",
+    "title": "3  Clase 1",
+    "section": "3.4 Series de tiempo vs microeconometría",
+    "text": "3.4 Series de tiempo vs microeconometría\n\nTeoría económica usaba modelos y deducía de ellos los efectos de cambios de polítca\nO usaba series de tiempo agregadas que trataban de ser ligadas a modelos con consumidores o empresas representativas\nCosas que han cambiado:\n\nDisponibilidad de microdatos\nDemanda por probar empíricamente modelos más ricos\nCapacidad de cómputo\n\nDe hecho, algunos macroeconomistas están volteando a ver los métodos de la microeconomía aplicada:\n\nEstudios de evento\nControles sintéticos"
+  },
+  {
+    "objectID": "clase_1.html#tipos-de-problemas-de-evaluación",
+    "href": "clase_1.html#tipos-de-problemas-de-evaluación",
+    "title": "3  Clase 1",
+    "section": "3.5 Tipos de problemas de evaluación",
+    "text": "3.5 Tipos de problemas de evaluación\n\nEfectos de tratamiento\n\n\n¿Cuál es el efecto de \\(T\\) sobre los participantes o no participantes de cierta política?\n¿Funciona un determinado programa?\nSe requieren condiciones débiles\nNo es fácil extrapolar las conclusiones a otros contextos\n\n\nEstimación estructural\n\n\n¿Cuál es el efecto potencial de un nuevo \\(T\\) en una población?\nProblema parecido a determinar la demanda de un bien recién introducido al mercado\nSe imponen condiciones fuertes\nSe trata de estimar una serie de parámetros que caracterizan las preferencias y tecnología de individuos, hogares y empresas"
+  }
+]

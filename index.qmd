@@ -1,0 +1,22 @@
+# Prefacio {.unnumbered}
+
+Aquí va un prefacio. Última cosa que escribir.
+
+Pero por ahora, nos servirá para escribir instrucciones generales.
+
+Para citar algo se hace así:
+
+En su clásico artículo @white1980heteroskedasticity muestra que se pueden hacer cosas sin asumir normalidad.
+
+Para ello, notar que el archivo referencias.bib tiene los datos del artículo citado.
+
+Lo que vamos a hacer es:
+
+Para cada una de las clases de EPS 2021 hay un archivo de presentaciones. Vamos a crear un archivo por clase, por ahora. Yo luego me daré a la tarea de concatenar los archivos por temas.
+
+Ver el ejemplo para la clase 1.
+
+1. Creamos un documento de html de Quarto en limpio
+1. Pegamos en el documento el contenido de la clase
+1. Eliminamos las separaciones de las diapositivas, que son tres guiones "---" o dos guíones "--" en el caso de las pausas. Dejemos los títulos y subtítulos.
+1. Una vez que está limpio, agreguemos un símbolo de gato donde ya hay símbolo de gato. Esto *meterá* un nivel el texto.

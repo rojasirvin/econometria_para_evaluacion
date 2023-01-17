@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Econometría para Evaluación de Programas - 3&nbsp; Clase 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./referencias.html" rel="next">
+<link href="./resumen.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Clase 1</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Econometría para Evaluación de Programas</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefacio</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resumen.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clase_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Clase 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./referencias.html" class="sidebar-item-text sidebar-link">Referencias</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#evaluación-de-programas" id="toc-evaluación-de-programas" class="nav-link active" data-scroll-target="#evaluación-de-programas"><span class="toc-section-number">3.1</span>  Evaluación de programas</a></li>
+  <li><a href="#las-preguntas" id="toc-las-preguntas" class="nav-link" data-scroll-target="#las-preguntas"><span class="toc-section-number">3.2</span>  Las preguntas</a></li>
+  <li><a href="#la-importancia-de-la-teoría" id="toc-la-importancia-de-la-teoría" class="nav-link" data-scroll-target="#la-importancia-de-la-teoría"><span class="toc-section-number">3.3</span>  La importancia de la teoría</a></li>
+  <li><a href="#series-de-tiempo-vs-microeconometría" id="toc-series-de-tiempo-vs-microeconometría" class="nav-link" data-scroll-target="#series-de-tiempo-vs-microeconometría"><span class="toc-section-number">3.4</span>  Series de tiempo vs microeconometría</a></li>
+  <li><a href="#tipos-de-problemas-de-evaluación" id="toc-tipos-de-problemas-de-evaluación" class="nav-link" data-scroll-target="#tipos-de-problemas-de-evaluación"><span class="toc-section-number">3.5</span>  Tipos de problemas de evaluación</a></li>
+  <li><a href="#ejemplo-impuestos" id="toc-ejemplo-impuestos" class="nav-link" data-scroll-target="#ejemplo-impuestos"><span class="toc-section-number">4</span>  Ejemplo: impuestos</a></li>
+  <li><a href="#caso-1.-un-impuesto-ya-conocido-en-la-misma-población" id="toc-caso-1.-un-impuesto-ya-conocido-en-la-misma-población" class="nav-link" data-scroll-target="#caso-1.-un-impuesto-ya-conocido-en-la-misma-población"><span class="toc-section-number">5</span>  Caso 1. Un impuesto ya conocido en la misma población</a></li>
+  <li><a href="#caso-2.-decir-algo-sobre-una-política-en-un-nuevo-contexto" id="toc-caso-2.-decir-algo-sobre-una-política-en-un-nuevo-contexto" class="nav-link" data-scroll-target="#caso-2.-decir-algo-sobre-una-política-en-un-nuevo-contexto"><span class="toc-section-number">6</span>  Caso 2. Decir algo sobre una política en un nuevo contexto</a></li>
+  <li><a href="#caso-3.-mucho-más-complicado" id="toc-caso-3.-mucho-más-complicado" class="nav-link" data-scroll-target="#caso-3.-mucho-más-complicado"><span class="toc-section-number">7</span>  Caso 3. Mucho más complicado</a></li>
+  <li><a href="#el-diseño-para-responder-las-preguntas" id="toc-el-diseño-para-responder-las-preguntas" class="nav-link" data-scroll-target="#el-diseño-para-responder-las-preguntas"><span class="toc-section-number">8</span>  2. El diseño para responder las preguntas</a></li>
+  <li><a href="#causalidad-y-evaluación-de-políticas" id="toc-causalidad-y-evaluación-de-políticas" class="nav-link" data-scroll-target="#causalidad-y-evaluación-de-políticas"><span class="toc-section-number">9</span>  Causalidad y evaluación de políticas</a></li>
+  <li><a href="#sesgo-de-selección" id="toc-sesgo-de-selección" class="nav-link" data-scroll-target="#sesgo-de-selección"><span class="toc-section-number">10</span>  Sesgo de selección</a></li>
+  <li><a href="#nuevas-avenidas" id="toc-nuevas-avenidas" class="nav-link" data-scroll-target="#nuevas-avenidas"><span class="toc-section-number">11</span>  Nuevas avenidas</a></li>
+  <li><a href="#las-técnicas-apropiadas-para-implementar-el-diseño" id="toc-las-técnicas-apropiadas-para-implementar-el-diseño" class="nav-link" data-scroll-target="#las-técnicas-apropiadas-para-implementar-el-diseño"><span class="toc-section-number">12</span>  3. Las técnicas apropiadas para implementar el diseño</a></li>
+  <li><a href="#la-econometría-como-herramienta" id="toc-la-econometría-como-herramienta" class="nav-link" data-scroll-target="#la-econometría-como-herramienta"><span class="toc-section-number">13</span>  La econometría como herramienta</a></li>
+  <li><a href="#algunos-temas-que-abordaremos-en-el-curso-incluyen" id="toc-algunos-temas-que-abordaremos-en-el-curso-incluyen" class="nav-link" data-scroll-target="#algunos-temas-que-abordaremos-en-el-curso-incluyen"><span class="toc-section-number">14</span>  Algunos temas que abordaremos en el curso incluyen</a></li>
+  <li><a href="#habilidades-de-economista" id="toc-habilidades-de-economista" class="nav-link" data-scroll-target="#habilidades-de-economista"><span class="toc-section-number">15</span>  Habilidades de economista</a></li>
+  <li><a href="#espero-que-al-final-del-curso-puedan" id="toc-espero-que-al-final-del-curso-puedan" class="nav-link" data-scroll-target="#espero-que-al-final-del-curso-puedan"><span class="toc-section-number">16</span>  Espero que al final del curso puedan</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Clase 1</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="evaluación-de-programas" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="evaluación-de-programas"><span class="header-section-number">3.1</span> Evaluación de programas</h2>
+<ul>
+<li><p>Este curso está enfocado en métodos para identificar relaciones causales</p></li>
+<li><p>Entre ellas están las relaciones que surgen por la implementación deliberada de programas públicos</p></li>
+<li><p>Pero no nos limitamos a este tipo de acciones: nos interesa comprender la teoría y la práctica para dar respuesta a relaciones que surgen</p>
+<ul>
+<li><p>De la legislación nacional o subnacional</p></li>
+<li><p>De fenómenos naturales</p></li>
+<li><p>Del funcionamiento de los mercados y las instituciones</p></li>
+</ul></li>
+<li><p>En el curso enfatizaremos lo siguiente:</p>
+<ol type="1">
+<li>La importancia de las preguntas</li>
+<li>El diseño para responder dichas preguntas</li>
+<li>Las técnicas apropiadas para implementar el diseño</li>
+</ol></li>
+</ul>
+</section>
+<section id="las-preguntas" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="las-preguntas"><span class="header-section-number">3.2</span> Las preguntas</h2>
+<ul>
+<li><p>Podemos estimar relaciones causales casi de cualquier cosa</p></li>
+<li><p>Pero no todas las relaciones causales son de interés</p></li>
+<li><p>Y muchas cosas que son de interés son difíciles de estudiar desde el punto de vista de las relaciones causales</p></li>
+</ul>
+</section>
+<section id="la-importancia-de-la-teoría" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="la-importancia-de-la-teoría"><span class="header-section-number">3.3</span> La importancia de la teoría</h2>
+<ul>
+<li><p>En este curso enfatizacermos la evaluación relacionada a la respuesta de una relación teórica</p></li>
+<li><p>Para los economistas, los datos no <em>hablan</em> solos</p></li>
+<li><p>La teoría es necesaria para establecer la relación entre <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span></p></li>
+<li><p>Tenemos la fortuna de disponer cada vez de mejores datos</p></li>
+<li><p>Mejores datos nos permiten probar mejor modelos cada vez más ricos</p></li>
+</ul>
+</section>
+<section id="series-de-tiempo-vs-microeconometría" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="series-de-tiempo-vs-microeconometría"><span class="header-section-number">3.4</span> Series de tiempo vs microeconometría</h2>
+<ul>
+<li><p>Teoría económica usaba modelos y deducía de ellos los efectos de cambios de polítca</p></li>
+<li><p>O usaba series de tiempo agregadas que trataban de ser ligadas a modelos con consumidores o empresas representativas</p></li>
+<li><p>Cosas que han cambiado:</p>
+<ul>
+<li>Disponibilidad de microdatos</li>
+<li>Demanda por probar empíricamente modelos más ricos</li>
+<li>Capacidad de cómputo</li>
+</ul></li>
+<li><p>De hecho, algunos macroeconomistas están volteando a ver los métodos de la microeconomía aplicada:</p>
+<ul>
+<li>Estudios de evento</li>
+<li>Controles sintéticos</li>
+</ul></li>
+</ul>
+</section>
+<section id="tipos-de-problemas-de-evaluación" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="tipos-de-problemas-de-evaluación"><span class="header-section-number">3.5</span> Tipos de problemas de evaluación</h2>
+<ol type="1">
+<li><em>Efectos de tratamiento</em></li>
+</ol>
+<ul>
+<li><p>¿Cuál es el efecto de <span class="math inline">\(T\)</span> sobre los participantes o no participantes de cierta política?</p></li>
+<li><p>¿Funciona un determinado programa?</p></li>
+<li><p>Se requieren condiciones débiles</p></li>
+<li><p>No es fácil extrapolar las conclusiones a otros contextos</p></li>
+</ul>
+<ol type="1">
+<li><em>Estimación estructural</em></li>
+</ol>
+<ul>
+<li><p>¿Cuál es el efecto potencial de un nuevo <span class="math inline">\(T\)</span> en una población?</p></li>
+<li><p>Problema parecido a determinar la demanda de un bien recién introducido al mercado</p></li>
+<li><p>Se imponen condiciones fuertes</p></li>
+<li><p>Se trata de estimar una serie de parámetros que caracterizan las preferencias y tecnología de individuos, hogares y empresas</p></li>
+</ul>
+</section>
+<section id="ejemplo-impuestos" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ejemplo: impuestos</h1>
+<ul>
+<li><p>Consideremos el cambio en la tasa del impuesto al ingreso <span class="math inline">\(t\)</span></p></li>
+<li><p>La oferta es función del salario <span class="math inline">\(W\)</span>, de características observadas <span class="math inline">\(X\)</span> y de inobservables <span class="math inline">\(U\)</span> <span class="math inline">\(H=\phi(W,X,U)\)</span></p></li>
+<li><p>La pregunta de evaluación es encontrar la magnitud de <span class="math inline">\(\phi(W(1-t'),X,U)-\phi(W(1-t),X,U)\)</span> para cada individuo</p></li>
+<li><p>Tenemos tres posibles tipos de evaluaciones, dependiendo del tipo de impuesto y dónde se va a implementar:</p>
+<ol type="1">
+<li><p>Un impuesto que ya ha existido antes en una población y queremos saber su efecto en la misma población, caracterizada por su distribución de <span class="math inline">\((W,X,U)\)</span></p></li>
+<li><p>El impuesto ha existido antes, pero queremos conocer su efecto en una población distinta, con una distribución distinta de <span class="math inline">\((W,X,U)\)</span></p></li>
+<li><p>El impuesto nunca ha sido implementado y queremos predecir su efecto en la población usada para estimar la oferta laboral o en otra población</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="caso-1.-un-impuesto-ya-conocido-en-la-misma-población" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Caso 1. Un impuesto ya conocido en la misma población</h1>
+<ul>
+<li><p>Supongamos que la población ha vivido distintos regímenes de impuestos <span class="math inline">\(t_j\)</span>, con <span class="math inline">\(j=1,\ldots, J\)</span> y tenemos datos sobre la oferta laboral bajo estos regímenes</p></li>
+<li><p>Este es un problema relativamente simple pues tenemos los datos para calcular la oferta laboral esperada para cada impuesto:</p></li>
+</ul>
+<p><span class="math display">\[E(H|W,X,t)=\int\phi(W(1-t_j),X,U)dG(U|X,W)\]</span> - No necesitamos un contrafactual pues podemos esperar que lo ocurrido antes aplique para el futuro si <span class="math inline">\(\phi(\cdot)\)</span> y <span class="math inline">\(G(\cdot)\)</span> no cambiaron</p>
+</section>
+<section id="caso-2.-decir-algo-sobre-una-política-en-un-nuevo-contexto" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Caso 2. Decir algo sobre una política en un nuevo contexto</h1>
+<ul>
+<li><p>Problema mucho más complicado</p></li>
+<li><p>Debemos estimar <span class="math inline">\(\phi'(\cdot)\)</span> y <span class="math inline">\(G'(\cdot)\)</span> en el nuevo ambiente, o tratar determinar la relación entre <span class="math inline">\(\phi\)</span> y <span class="math inline">\(\phi'\)</span> y entre <span class="math inline">\(G\)</span> y <span class="math inline">\(G'\)</span></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>“La existencia de un problema radica en que el futuro es distinto que el pasado, mientras que la posibilidad de una solución depende de que el futuro se parezca al pasado.”</p>
+<p>— Kinight (1921)</p>
+</blockquote>
+<ul>
+<li>Este es el tipo de problemas en donde la estimación estructural es de gran valor</li>
+</ul>
+</section>
+<section id="caso-3.-mucho-más-complicado" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Caso 3. Mucho más complicado</h1>
+<ul>
+<li><p>¿Qué pasa si nunca ha existido un impuesto similar en el país de interés?</p></li>
+<li><p>¿Podemos identificar el efecto del impuesto a partir de variaciones en el salario?</p></li>
+<li><p>Solo si asumimos que el efecto del impuesto actúa vía el salario</p></li>
+</ul>
+</section>
+<section id="el-diseño-para-responder-las-preguntas" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 2. El diseño para responder las preguntas</h1>
+</section>
+<section id="causalidad-y-evaluación-de-políticas" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Causalidad y evaluación de políticas</h1>
+<ul>
+<li><p>Los diseños experimentales han puesto pie firme como el <em>gold standard</em> para la evaluación de políticas</p></li>
+<li><p>Los investigadores pelean por fondos de gobiernos, ONGs y <em>think tanks</em> para evaluar políticas realizando asignaciones experimentales de tratamientos</p></li>
+<li><p>Esther Duflo, Michael Kremer y Abhijit Banerjee ganaron el Nobel de Economía en 2019 por sus contribuciones a la lucha contra la pobreza, donde los experimentos tienen un papel primordial</p></li>
+<li><p>El modelo de causal de Rubin o de <em>resultados potenciales</em> permite conceptualizar la mayoría de los problemas de evaluación pensando en qué <em>resultado</em> obtendría una unidad con y sin intervención</p></li>
+<li><p>Sin embargo, el <strong>problema fundamental de la inferencia causal</strong> implica que solo podemos observar a cada unidad en uno de los estados posibles</p></li>
+</ul>
+</section>
+<section id="sesgo-de-selección" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Sesgo de selección</h1>
+<ul>
+<li><p>En la práctica tenemos que comparar entre unidades que han recibido y que no han recibido el tratamiento</p></li>
+<li><p>Esto da original al <em>sesgo de selección</em>, es decir, a la existencia de factores que afectan tanto la asignación del tratamiento como del resultado mismo</p></li>
+<li><p>Veremos cómo la experimentación resuelve el sesgo de selección</p></li>
+<li><p>Pero también estudiaremos una amplia literatura que recae en una serie de supuestos bajo los cuales la asignación del tratamiento aproxima a una asignación aleatoria</p></li>
+<li><p>Esta literatura incluye métodos muy estudiados como las técnicas de <em>matching</em> y el uso de variables instrumentales</p></li>
+</ul>
+</section>
+<section id="nuevas-avenidas" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Nuevas avenidas</h1>
+<ul>
+<li><p>Nuevas avenidas en la investigación han dado lugar a nuevas estrategias de identificación</p></li>
+<li><p>Diseños de regresión discontinua</p>
+<ul>
+<li><p>Pliegues en regresión</p></li>
+<li><p>Discontinuidades geográficas</p></li>
+</ul></li>
+<li><p>Diferencia y diferencias y control sintético</p></li>
+<li><p>Efectos de tratamiento con tratamiento multivariado y con intensidad de tratamiento</p></li>
+<li><p>Efectos en el largo plazo</p></li>
+<li><p>Papel para <em>machine learning</em> y <em>big data</em></p></li>
+</ul>
+</section>
+<section id="las-técnicas-apropiadas-para-implementar-el-diseño" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> 3. Las técnicas apropiadas para implementar el diseño</h1>
+</section>
+<section id="la-econometría-como-herramienta" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> La econometría como herramienta</h1>
+<ul>
+<li><p>Nuestras preguntas requieren diseño</p></li>
+<li><p>Y nuestros diseños requieren una implementación apropiada</p></li>
+<li><p>Parte importante de nuestro curso será:</p>
+<ol type="1">
+<li><p>Conocer la teoría que permite la identificación de efectos de tratamiento en los distintos diseños</p></li>
+<li><p>Implementar las estrategias empíricas con datos en <em>R</em></p></li>
+</ol></li>
+</ul>
+</section>
+<section id="algunos-temas-que-abordaremos-en-el-curso-incluyen" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Algunos temas que abordaremos en el curso incluyen</h1>
+<ul>
+<li><p>Regresión por MCO, variables instrumentales y modelos no lineales</p></li>
+<li><p>Errores estándar robustos y agrupados</p></li>
+<li><p>Rutinas <em>bootstrap</em></p></li>
+<li><p>Análisis con placebos</p></li>
+<li><p>Pruebas de hipótesis</p></li>
+<li><p>Métodos no paramétricos</p></li>
+<li><p>Métodos de optimización</p></li>
+</ul>
+</section>
+<section id="habilidades-de-economista" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Habilidades de economista</h1>
+</section>
+<section id="espero-que-al-final-del-curso-puedan" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> Espero que al final del curso puedan</h1>
+<ul>
+<li><p>Identificar relaciones causales</p></li>
+<li><p>Proponer estrategias para evaluar</p></li>
+<li><p>Usar datos y programar sus estrategias empíricas</p></li>
+<li><p>Identificar literatura relevante, huecos en ella y avenidas para investigación futura</p></li>
+<li><p>Argumentar y presentar ideas de forma oral y escrita</p></li>
+</ul>
+<hr>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./resumen.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Resumen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./referencias.html" class="pagination-link">
+        <span class="nav-page-text">Referencias</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

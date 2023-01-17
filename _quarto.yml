@@ -1,0 +1,21 @@
+project:
+  type: book
+
+book:
+  title: "Econometría para Evaluación de Programas"
+  author: "Irvin Rojas"
+  date: "5/1/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - resumen.qmd
+    - clase_1.qmd
+    - referencias.qmd
+
+bibliography: referencias.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
