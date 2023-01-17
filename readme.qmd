@@ -1,0 +1,3 @@
+## README
+
+Estos los archivos del libro de Econometría para Evaluación.
