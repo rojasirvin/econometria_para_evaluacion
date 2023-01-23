@@ -1,0 +1,6 @@
+---
+title: "Clase 2"
+---
+
+Iniciamos este archivo.
+
