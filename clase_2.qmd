@@ -67,7 +67,6 @@ xfun::pkg_load2(c('base64enc', 'htmltools', 'mime'))
 
 - Lo que queremos conocer es qué le hubiera pasado a la población que recibió la intervención de no haberla recibido: el **contrafactual**
 
-class: inverse, middle, center
 
 ## La epidemiología está de moda
 
