@@ -1,0 +1,73 @@
+---
+title: "clase_6"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.path = "figures/")
+library(tidyverse)
+library(magick)
+library(reticulate)
+library(knitr)
+library(kableExtra)
+
+xfun::pkg_load2(c('base64enc', 'htmltools', 'mime'))
+```
+
+# Parámetros de interés de efectos de tratamientos
+
+## Supuesto de independencia condicional
+
+- En la sesión anterior vimos que el SIC nos dice que, condicional en $X_i$, los resultados potenciales son independientes del tratamiento
+
+- Cuando el tratamiento se asigna de manera aleatoria y el diseño experimental se, el supuesto es válido
+
+- Más aún, bajo asignación aleatoria, podemos hacer un supuesto aún más fuerte:
+
+$$\{y_{0i},y_{1i}\perp D_i \}$$
+
+
+## Efectos de tratamiento
+
+- Vamos a definir dos medidas de efecto de tratamiento ampliamente usadas en la literatura
+
+- Definamos el cambio en la variable de resultados de un individuo:
+
+$$\Delta_i=y_{1i}-y_{0i}$$
+
+**Efecto promedio del tratamiento** (ATE): se interpreta como la ganancia hipotética debido al tratamiento para un individuo seleccionado al azar en una población
+
+- Este parámetro es de relevancia cuando pensamos en tratamientos de aplicación universal
+
+- Matemáticamente:
+$$ATE=E(\Delta)$$
+## Efectos de tratamiento
+
+**Efecto promedio del tratamiento en los tratados** (ATET, TT, TOT)
+
+- Como su nombre lo dice, este parámetro solo considera a los individuos que son efectivamente tratados
+
+- Matemáticamente:
+$$ATET=E(\Delta_i|D_i=1)$$
+
+- Y su análogo muestral es:
+
+$$\hat{ATET}=\frac{1}{N_T}\sum_i^{N_T}(\Delta_i|D_i=1)$$
+
+
+- Con su correspondiente análogo muestral:
+$$\hat{ATE}=\frac{1}{N}\sum_i^N\Delta_i$$
+## Efectos de tratamiento
+
+- Heckman (1997) critica el uso del ATE pues pudiera ser irrelevante
+
+- ¿Cuál es el ATE de PROGRESA, por ejemplo?
+
+- La contracrítica es que siempre podemos restringir lo que es la *población* de interés
+
+- Noten que el ATET también abre la puerta a casos en los que, aún cuando el tratamiento se asignó aleatoriamente en un grupo, no todos a los que se les asigna el tratamiento efectivamente lo reciben
+
+- En ambos casos, no podemos estimar directamente los parámetros pues no observamos $\Delta_i$
+
+- Sin embargo, ya vimos cómo, con una muestra de tratados y no tratados, podemos inferir el efecto del tratamiento, bajo algunos supuestos
+
+- Nuestras afirmaciones siempre irán acompañadas de una *medida de incertidumbre* debido al error muestral
