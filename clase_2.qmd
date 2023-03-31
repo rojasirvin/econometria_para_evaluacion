@@ -95,13 +95,13 @@ xfun::pkg_load2(c('base64enc', 'htmltools', 'mime'))
 ## Para los que aman los mapas
 
 ```{r, out.width="90%", fig.align='center', fig.cap='Fuente: Smithsonian Magazine'}
-knitr::include_graphics("https://thumbs-prod.si-cdn.com/trC5qb_ILIffjzsnX3kEbvscwM0=/fit-in/1072x0/https://public-media.si-cdn.com/filer/20110520102403643px-Snow-cholera-map-1-300x279.jpg")
+knitr::include_graphics("https://public-media.si-cdn.com/filer/20110520102403643px-Snow-cholera-map-1-300x279.jpg")
 ```
 
 
-.pull-right[
 <iframe width='100%' height='450' frameborder='0' src='https://simonrogers.carto.com/tables/john_snow/embed_map?title=false&description=false&search=true&shareable=true&cartodb_logo=true&sql=SELECT%20*%20FROM%20john_snow%20ORDER%20BY%20num_deaths%2C%20geom_type%20ASC&sw_lat=51.51177397755052&sw_lon=-0.1421356201171875&ne_lat=51.51477858782044&ne_lon=-0.1318359375' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-]
+
+
 
 - Acá les dejo una nota en [The Guardian](https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map) sobre los mapas para hacer periodismo
 
